@@ -9,67 +9,112 @@
   <body>
     <div class="m-6">
       <!-- Header -->
-      <div class="flex">
+      <div class="flex sticky top-0 bg-white py-2 transition duration-300 ease-in-out" id="header">
         <div>
           <img src="./images/logo.svg" alt="" />
         </div>
-        <div class="ml-auto my-auto">
-          <img src="./images/icon-menu.svg" alt="" />
+        <!-- for display mobile -->
+        <div class="ml-auto my-auto tablet:hidden">
+          <img
+            src="./images/icon-menu.svg"
+            alt=""
+            id="openModal"
+            class="cursor-pointer"
+          />
+        </div>
+        <!-- for display laptop -->
+        <div class="hidden tablet:flex ml-auto gap-x-6">
+          <div class="cursor-pointer">Home</div>
+          <div class="cursor-pointer">New</div>
+          <div class="cursor-pointer">Popular</div>
+          <div class="cursor-pointer">Trending</div>
+          <div class="cursor-pointer">Categories</div>
         </div>
       </div>
-      <!-- Poster -->
-      <div class="my-4">
-        <img src="./images/image-web-3-mobile.jpg" alt="" />
-      </div>
-      <!-- Bright future -->
-      <div class="my-4">
-        <p class="text-6xl font-extrabold font-inter">
-          The Bright Future of Web 3.0
-        </p>
-        <p class="font-inter font-light text-xl text-slate-400 mt-4 mb-8">
-          We dive into the next evolution of the web that claims to put the
-          power of the platforms back into the hands of the people. But is it
-          really fulfilling its promise?
-        </p>
-        <a
-          href="#"
-          class="bg-red-400 py-3 px-12 text-white font-bold tracking-widest"
-          >READ MORE</a
-        >
-      </div>
-      <!-- new title -->
-      <div class="mt-14 bg-indigo-950 p-3">
-        <p class="text-2xl text-amber-300 font-bold">NEW</p>
-        <div class="my-4">
-          <p class="text-white font-bold text-lg">Hydrogen VS Electric Cars</p>
-          <p class="text-slate-400 my-2">
-            Will hydrogen-fulled cars ever catch up to EVs?
-          </p>
+      <div class="tablet:flex tablet:gap-x-8">
+        <div class="tablet:w-[80rem]">
+          <!-- Poster -->
+          <div class="my-4">
+            <!-- for mobile -->
+            <img
+              src="./images/image-web-3-mobile.jpg"
+              alt=""
+              class="tablet:hidden"
+            />
+            <!-- for tablet -->
+            <img
+              src="./images/image-web-3-desktop.jpg"
+              alt=""
+              class="hidden tablet:block"
+            />
+          </div>
+          <!-- Bright future -->
+          <div
+            class="my-4 tablet:flex laptop:grid laptop:grid-cols-2 tablet:gap-x-7 laptop:gap-x-6"
+          >
+            <div>
+              <p
+                class="text-6xl font-extrabold font-inter tablet:text-4xl laptop:text-6xl"
+              >
+                The Bright Future of Web 3.0
+              </p>
+            </div>
+            <div>
+              <p class="font-inter font-light text-xl text-slate-400 mt-4 mb-8">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <a
+                href="#"
+                class="bg-red-400 py-3 px-12 text-white font-bold tracking-widest"
+                >READ MORE</a
+              >
+            </div>
+          </div>
         </div>
-        <hr class="border-slate-500 border-t-2" />
-        <div class="my-4">
-          <p class="text-white font-bold text-lg">
-            The Downsides of AI Artistry
-          </p>
-          <p class="text-slate-400 my-2">
-            What are the possible advers effects of on-demand AI image
-            generation?
-          </p>
-        </div>
-        <hr class="border-slate-500 border-t-2" />
-        <div class="my-4">
-          <p class="text-white font-bold text-lg">Is VC Funding Drying Up?</p>
-          <p class="text-slate-400 my-2">
-            Private funding by VC firms is down 50% YOY. We take a look at the
-            whats the means.
-          </p>
+        <div>
+          <!-- new title -->
+          <div
+            class="mt-14 tablet:mt-4 tablet:h-full bg-indigo-950 p-3 laptop:p-8"
+          >
+            <p class="text-2xl text-amber-300 font-bold">NEW</p>
+            <div class="my-4 tablet:mt-4 laptop:mt-8">
+              <p class="text-white font-bold text-lg">
+                Hydrogen VS Electric Cars
+              </p>
+              <p class="text-slate-400 my-2">
+                Will hydrogen-fulled cars ever catch up to EVs?
+              </p>
+            </div>
+            <hr class="border-slate-500 border-t-2" />
+            <div class="my-4 tablet:mt-4 laptop:mt-8">
+              <p class="text-white font-bold text-lg">
+                The Downsides of AI Artistry
+              </p>
+              <p class="text-slate-400 my-2">
+                What are the possible advers effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+            <hr class="border-slate-500 border-t-2" />
+            <div class="my-4 tablet:mt-4 tablet:mb-0 laptop:mt-8">
+              <p class="text-white font-bold text-lg">
+                Is VC Funding Drying Up?
+              </p>
+              <p class="text-slate-400 my-2">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                the whats the means.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <!-- last content -->
-      <div class="my-5">
-        <div class="flex my-2">
-          <div class="w-40 h-full bg-black">
-            <img src="./images/image-retro-pcs.jpg" alt="" class="" />
+      <div class="my-5 tablet:grid tablet:grid-cols-3 tablet:my-10">
+        <div class="flex my-2 tablet:my-0">
+          <div class="w-40 h-36 tablet:h-full laptop:h-36 bg-black">
+            <img src="./images/image-retro-pcs.jpg" alt="" class="h-full" />
           </div>
           <div class="ml-5 my-auto w-full">
             <p class="text-3xl font-bold text-slate-400">01</p>
@@ -79,9 +124,9 @@
             </p>
           </div>
         </div>
-        <div class="flex my-6">
-          <div class="w-40 h-full bg-black">
-            <img src="./images/image-top-laptops.jpg" alt="" class="" />
+        <div class="flex my-6 tablet:my-0">
+          <div class="w-40 h-36 tablet:h-full laptop:h-36 bg-black">
+            <img src="./images/image-top-laptops.jpg" alt="" class="h-full" />
           </div>
           <div class="ml-5 my-auto w-full">
             <p class="text-3xl font-bold text-slate-400">02</p>
@@ -91,9 +136,9 @@
             </p>
           </div>
         </div>
-        <div class="flex my-6">
-          <div class="w-40 h-full bg-black">
-            <img src="./images/image-gaming-growth.jpg" alt="" class="" />
+        <div class="flex my-6 tablet:my-0">
+          <div class="w-40 h-36 tablet:h-full laptop:h-36 bg-black">
+            <img src="./images/image-gaming-growth.jpg" alt="" class="h-full" />
           </div>
           <div class="ml-5 my-auto w-full">
             <p class="text-3xl font-bold text-slate-400">03</p>
@@ -112,6 +157,31 @@
           class="text-blue-600"
           >Frontend Mentor</a
         >. Coded by <a href="#" class="text-blue-600">Aris Trisnawan</a>.
+      </div>
+      <!-- modal -->
+      <div
+        id="myModal"
+        class="fixed inset-0 items-center justify-center z-50 hidden"
+      >
+        <div class="bg-white p-4 rounded shadow-lg">
+          <h2 class="text-xl font-bold mb-4">Modal Title</h2>
+          <p>This is the content of the modal.</p>
+          <button
+            id="closeModal"
+            class="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+          >
+            Close
+          </button>
+        </div>
+        <script>
+          document.getElementById('openModal').addEventListener('click', function() {
+            document.getElementById('myModal').classList.remove('hidden');
+          });
+        
+          document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('myModal').classList.add('hidden');
+          });
+        </script>        
       </div>
     </div>
   </body>
