@@ -9,7 +9,7 @@
   <body>
     <div class="m-6">
       <!-- Header -->
-      <div class="flex sticky top-0 bg-white py-2 transition duration-300 ease-in-out" id="header">
+      <div class="flex sticky top-0 bg-white py-2" id="header">
         <div>
           <img src="./images/logo.svg" alt="" />
         </div>
@@ -163,26 +163,60 @@
         id="myModal"
         class="fixed inset-0 items-center justify-center z-50 hidden"
       >
-        <div class="bg-white p-4 rounded shadow-lg">
-          <h2 class="text-xl font-bold mb-4">Modal Title</h2>
-          <p>This is the content of the modal.</p>
-          <button
-            id="closeModal"
-            class="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-          >
-            Close
-          </button>
+        <div class="bg-white p-4 rounded shadow-lg" id="closeModal">
+          <ul class="ml-auto">
+            <li
+              class="hover:bg-slate-600 hover:text-white cursor-pointer py-3 px-2"
+            >
+              <a href="#">Home</a>
+            </li>
+            <li
+              class="hover:bg-slate-600 hover:text-white cursor-pointer py-3 px-2"
+            >
+              <a href="#">New</a>
+            </li>
+            <li
+              class="hover:bg-slate-600 hover:text-white cursor-pointer py-3 px-2"
+            >
+              <a href="#">Popular</a>
+            </li>
+            <li
+              class="hover:bg-slate-600 hover:text-white cursor-pointer py-3 px-2"
+            >
+              <a href="#">Trending</a>
+            </li>
+            <li
+              class="hover:bg-slate-600 hover:text-white cursor-pointer py-3 px-2"
+            >
+              <a href="#">Categories</a>
+            </li>
+          </ul>
         </div>
-        <script>
-          document.getElementById('openModal').addEventListener('click', function() {
-            document.getElementById('myModal').classList.remove('hidden');
-          });
-        
-          document.getElementById('closeModal').addEventListener('click', function() {
-            document.getElementById('myModal').classList.add('hidden');
-          });
-        </script>        
       </div>
+      <script>
+        document
+          .getElementById("openModal")
+          .addEventListener("click", function () {
+            document.getElementById("myModal").classList.remove("hidden");
+          });
+
+        document
+          .getElementById("closeModal")
+          .addEventListener("click", function () {
+            document.getElementById("myModal").classList.add("hidden");
+          });
+
+        // Add event listener to the document to close the modal when clicking outside
+        document.addEventListener("click", function (event) {
+          const modal = document.getElementById("myModal");
+          const modalContent = document.querySelector(".bg-white");
+
+          // Check if the clicked element is outside the modal content
+          if (event.target !== modal && !modalContent.contains(event.target)) {
+            modal.classList.add("hidden");
+          }
+        });
+      </script>
     </div>
   </body>
 </html>
